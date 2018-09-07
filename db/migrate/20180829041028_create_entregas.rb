@@ -3,6 +3,7 @@ class CreateEntregas < ActiveRecord::Migration[5.1]
     create_table :entregas do |t|
       t.references :vecino, foreign_key: true
       t.references :recolector, foreign_key: true
+      t.references :residuo, foreign_key: true
       t.string :estado
       t.float :peso
 
